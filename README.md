@@ -12,7 +12,7 @@ The style is replicated in the form of conversations between multiple people.
 ## Parameters
 - **Dataset Size:** 1 million tokens
 - **Parameters Learnt:** 10 million
-- **context length:**256
+- **context length:** 256
 
 ## Features
 

@@ -3,6 +3,11 @@
 ## Overview
 
 Shakespearian Transformer is a project aimed at generating text in the style of Shakespeare using a transformer-based neural network model.
+The generation happens as conversations between mutiple people. 
+
+## Parameters
+- **Dataset Size:** 1 million tokens
+- **Parameters Learnt:** 10 million
 
 ## Features
 
@@ -31,10 +36,14 @@ Shakespearian Transformer is a project aimed at generating text in the style of 
 3. **Train Model:** Run `train.py` to train the model.
 4. **Generate Text:** Use `generator.py` to generate text in Shakespearean style.
 
+## Generation
+
+The repository also include the weight file, the model was trained on 1 million tokens (character level tokenization), for approximately 5000 traninig cycles.
+The generator.py can be used to directly initialize and generate characters by specifying context and token count.
+Once generated, you can enjoy conversations between people in the style of shakesphere's likeness
+
 ## Contributing
 
 Feel free to open issues or submit pull requests if you have suggestions for improvements.
 
-## License
 
-This project is licensed under the MIT License.

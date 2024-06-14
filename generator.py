@@ -14,16 +14,18 @@ model.to(device)
 print("Model loaded successfully.")
 print(f"Model device: {next(model.parameters()).device}")
 
+given = True
+cont = input("enter context (just press enter if you want the generation to be random):  ")
+if cont == "":
+    context = torch.zeros((1,1),dtype=torch.long, device=device)
+    given = False
+    
+if given:
+    encoded_context = decode.encode(cont)
+    length = len(encoded_context)
+    t = torch.tensor(encoded_context)
+    context = t.view((1,length))
 
-cont = input("enter context: ")
-encoded_context = decode.encode(cont)
-length = len(encoded_context)
-t = torch.tensor(encoded_context)
-context = t.view((1,length))
-
-
-# f = torch.zeros((1,1),dtype=torch.long)
-# context = torch.zeros((1, 1), dtype=torch.long, device=device)
 print(f"Context tensor device: {context.device}")
 
 token_count = int(input("no of tokens to be printed: "))

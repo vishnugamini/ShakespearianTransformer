@@ -12,5 +12,5 @@ class Variables:
         self.n_head = 6
         self.n_layer = 6
         self.dropout = 0.2
-        self.device = 'cpu'
+        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.vocab_size = 65

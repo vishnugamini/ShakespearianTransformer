@@ -6,8 +6,8 @@ Shakespearian Transformer is a project aimed at generating text in the style of 
 The generation happens as conversations between mutiple people. 
 
 ## Example Images
-![Shakespeare Image](images/example-1.png)
-![Shakespeare Image](images/example-3.png)
+![Shakespeare Image](images/example-1.png) ![Shakespeare Image](images/example-3.png)
+
 
 ## Parameters
 - **Dataset Size:** 1 million tokens

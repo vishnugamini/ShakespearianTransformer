@@ -43,9 +43,9 @@ The style is replicated in the form of conversations between multiple people.
 
 ## Generation
 
-The repository also include the weight file, the model was trained on 1 million tokens (character level tokenization), for approximately 5000 traninig cycles.
+The repository also include the weight file, the model was trained on 1 million tokens (character level tokenization), for approximately 5000 training cycles.
 The generator.py can be used to directly initialize and generate characters by specifying context and token count.
-Once generated, you can enjoy conversations between people in the style of shakesphere's likeness
+Once generated, you can enjoy looking at the conversations between people in the style of shakesphere's likeness
 
 ## Contributing
 

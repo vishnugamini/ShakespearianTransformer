@@ -11,6 +11,7 @@ model = model_architecture.BigramLanguageModel()
 model.load_state_dict(torch.load('gpt.pth', map_location=torch.device('cpu')))
 
 model.to(device)
+model.eval()
 print("Model loaded successfully.")
 print(f"Model device: {next(model.parameters()).device}")
 
@@ -29,9 +30,12 @@ if given:
 print(f"Context tensor device: {context.device}")
 
 token_count = int(input("no of tokens to be printed: "))
+print("Generated text:")
+print("----------------------------------------------------------------")
+print(cont,end="")
 generated_text = model.generate(context, max_new_tokens= token_count)
 decoded_text = decode.decode(generated_text[0].tolist())
 
-print("Generated text:")
-print("----------------------------------------------------------------")
+
+
 print(decoded_text)

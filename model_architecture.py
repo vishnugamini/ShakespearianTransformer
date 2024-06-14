@@ -2,7 +2,9 @@ import torch
 import variables_loader
 import torch.nn as nn
 from torch.nn import functional as F
-
+import encode_decode
+import time
+decode = encode_decode.EncDec()
 v = variables_loader.Variables()
 n_embd = v.n_embd
 block_size = v.block_size
@@ -119,6 +121,8 @@ class BigramLanguageModel(nn.Module):
             logits = logits[:,-1,:] #(B,C)
             probs = F.softmax(logits,dim=-1) #(B,C)
             idx_nxt = torch.multinomial(probs,num_samples=1) #(B,1)
-            # idx_nxt = torch.argmax(probs,dim=-1)
+            # idx_nxt = torch.argmax(probs,dim=-1,keepdim=True)
+            # print(idx_nxt.tolist()[0])
+            print(decode.decode(idx_nxt[0].tolist()),end="")
             idx = torch.cat((idx,idx_nxt),dim=1) #(B,T+1)
         return idx

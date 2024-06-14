@@ -1,0 +1,35 @@
+import torch
+import model_architecture
+import encode_decode
+
+decode = encode_decode.EncDec()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print(f"Using device: {device}")
+
+model = model_architecture.BigramLanguageModel()
+
+model.load_state_dict(torch.load('gpt.pth', map_location=torch.device('cpu')))
+
+model.to(device)
+print("Model loaded successfully.")
+print(f"Model device: {next(model.parameters()).device}")
+
+
+cont = input("enter context: ")
+encoded_context = decode.encode(cont)
+length = len(encoded_context)
+t = torch.tensor(encoded_context)
+context = t.view((1,length))
+
+
+# f = torch.zeros((1,1),dtype=torch.long)
+# context = torch.zeros((1, 1), dtype=torch.long, device=device)
+print(f"Context tensor device: {context.device}")
+
+token_count = int(input("no of tokens to be printed: "))
+generated_text = model.generate(context, max_new_tokens= token_count)
+decoded_text = decode.decode(generated_text[0].tolist())
+
+print("Generated text:")
+print("----------------------------------------------------------------")
+print(decoded_text)

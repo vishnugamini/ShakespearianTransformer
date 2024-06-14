@@ -3,7 +3,7 @@
 ## Overview
 
 Shakespearian Transformer is a project aimed at generating text in the style of Shakespeare using a transformer-based neural network model.
-The generation happens as conversations between mutiple people. 
+The style is replicated in the form of conversations between multiple people.
 
 ## Example Images
 ![Shakespeare Image](images/pic-2.png) ![Shakespeare Image](images/pic-1.png)
@@ -12,6 +12,7 @@ The generation happens as conversations between mutiple people.
 ## Parameters
 - **Dataset Size:** 1 million tokens
 - **Parameters Learnt:** 10 million
+- **context length:**256
 
 ## Features
 

@@ -35,7 +35,4 @@ print("----------------------------------------------------------------")
 print(cont,end="")
 generated_text = model.generate(context, max_new_tokens= token_count)
 decoded_text = decode.decode(generated_text[0].tolist())
-
-
-
-print(decoded_text)
+# print(decoded_text)

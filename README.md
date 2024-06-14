@@ -8,12 +8,13 @@ The style is replicated in the form of conversations between multiple people.
 ## Example Images
 ![Shakespeare Image](images/pic-2.png) ![Shakespeare Image](images/pic-1.png)
 
-
 ## Parameters
 - **Dataset Size:** 1 million tokens
 - **Parameters Learnt:** 10 million
 - **context length:** 256
 
+## Architecture
+![Architecture Image](images/pic-3.png) 
 ## Features
 
 - **Data Loading:** Scripts for loading and preprocessing data.

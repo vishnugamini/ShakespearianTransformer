@@ -6,8 +6,8 @@ Shakespearian Transformer is a project aimed at generating text in the style of 
 The style is replicated in the form of conversations between multiple people.
 
 ## Example Images
-- **Step 1::** Open terminal and navigate to the Shakespearian_Transformer folder.
-- **Step 2::** run the `generator.py`.
+- **Step 1:** Open terminal and navigate to the Shakespearian_Transformer folder.
+- **Step 2:** run the `generator.py`.
 - **Step 3:** fill in the prompted parameters and enjoy freshly generated conversations in shakespear style.
 ![Shakespeare Image](images/pic-2.png) ![Shakespeare Image](images/pic-1.png)
 
